@@ -2,11 +2,25 @@
 
 I mainly use these for quickly prototyping competetive programming questions.
 
+
+### Pre-requisites
+```powershell
+pip install -r requirements.txt
+```
+
+
 ### [template.py](template.py)
 
 My CodeChef template for PYTH 3.6 (Python 3.6).
 Works with smallest as well as largest inputs and outputs possible in python.
-Yeilds lower defaut overhead when running than a regular script.
+Yields lower defaut overhead when running than a regular script.
+
+#### Usage
+Write your code in `tc()` method block.
+You can also enable profiling for the entire execution of the main method by setting -
+```python
+PROFILE = True
+```
 
 
 ### [monitor.py](monitor.py)
@@ -15,7 +29,7 @@ Hot-reloader script for quick reloading of the scripts without switching your ed
 
 #### Usage
 
-```bash
+```powershell
 python monitor.py [script_name.py]
 ```
 
