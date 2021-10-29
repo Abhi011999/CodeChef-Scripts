@@ -6,8 +6,8 @@ import logging
 import importlib
 import subprocess
 import coloredlogs
+from poller import KeyPoller
 from threading import Thread
-from pynput import keyboard
 
 LOGGER = logging.getLogger("hot_reload")
 # coloredlogs.install(level="DEBUG", logger=LOGGER)
@@ -71,12 +71,12 @@ class Loader:
         monitor = Monitor(self, frequency)
         monitor.start()
 
-        listener = keyboard.Listener(on_press=self.notify_key_press)
-        listener.start()
+        kp = KeyPoller(on_press=self.notify_key_press)
+        kp.start()
 
     def notify_key_press(self, key):
         try:
-            if key.char == "r":
+            if key == "r":
                 LOGGER.info("Reload key pressed, reloading...")
                 self.changed = True
         except:
