@@ -1,4 +1,8 @@
 Traceback (most recent call last):
-  File "monitor.py", line 30, in <module>
-    time.sleep(0.05)
-KeyboardInterrupt
+  File "test.py", line 79, in <module>
+    init(PROFILE)
+  File "test.py", line 65, in init
+    main()
+  File "test.py", line 47, in main
+    tc()
+NameError: name 'tc' is not defined

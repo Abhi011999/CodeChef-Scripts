@@ -6,6 +6,7 @@ Modified to work with Python 3.6 and run asynchronously.
 """
 
 import os
+import time
 from threading import Thread
 
 IS_WINDOWS = os.name == "nt"
@@ -92,4 +93,5 @@ class KeyPoller(Thread):
             k = self.poll()
             if k is not None:
                 self.on_press(k)
+            time.sleep(0.01)
 
