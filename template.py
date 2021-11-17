@@ -1,12 +1,13 @@
 import os
 import sys
 import math
+import operator
 from random import randint, randrange
 from collections import defaultdict, Counter, deque
 from itertools import permutations, combinations
 from itertools import groupby, accumulate
 from bisect import bisect_left, bisect_right
-from functools import lru_cache
+from functools import lru_cache, reduce
 
 # sys.setrecursionlimit(200000000)
 # MOD = 1000000000 + 7
