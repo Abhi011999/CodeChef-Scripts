@@ -12,6 +12,7 @@ from functools import lru_cache, reduce
 # sys.setrecursionlimit(200000000)
 # MOD = 1000000000 + 7
 PROFILE = False
+ONE_CASE = False
 
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 # print = lambda *args: sys.stdout.write(f"{args}\n")
@@ -31,7 +32,10 @@ def tc():
 
 
 def main():
-    for _ in _t():
+    if not ONE_CASE:
+        for _ in _t():
+            tc()
+    else:
         tc()
 
 
